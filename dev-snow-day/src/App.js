@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
 
 function App() {
+  const [isSnowing, setIsSnowing] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{backgroundColor: 'white'}}>
+      <h1 style={{color: 'black'}}>Is it snowing?</h1>
+      {isSnowing ? (
+        <h1 style={{color: 'black'}}>Woah! Snow! Go outside and build a snowman!</h1>
+        ) : (
+        <h1 style={{color: 'black'}}>Nah... back to work</h1>
+      )}
     </div>
   );
 }
